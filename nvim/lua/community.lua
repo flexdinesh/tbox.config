@@ -30,6 +30,7 @@ return {
   { import = "astrocommunity.pack.terraform" },
   { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.pack.yaml" },
+  { import = "astrocommunity.pack.helm" },
   -- { import = "astrocommunity.recipes.auto-session-restore" },
   -- { import = "astrocommunity.scrolling.neoscroll-nvim" },
   -- { import = "astrocommunity.utility.hover-nvim" },
