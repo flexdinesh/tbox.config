@@ -114,3 +114,14 @@ export NVM_DIR=~/.nvm
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 alias nvim="$HOME/bin/nvim-macos-arm64/bin/nvim"
+export EDITOR="nvim"
+export VISUAL="nvim"
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/dineshpandiyan/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/dineshpandiyan/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/dineshpandiyan/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/dineshpandiyan/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
