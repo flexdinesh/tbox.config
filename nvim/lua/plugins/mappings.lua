@@ -4,7 +4,7 @@ return {
     ---@type AstroCoreOpts
     opts = {
       mappings = {
-        -- first key is the mode
+        -- first key is the mode (`:h map-modes`)
         n = {
           -- second key is the lefthand side of the map
           -- mappings seen under group name "Buffer"
@@ -14,6 +14,9 @@ return {
         t = {
           -- setting a mapping to false will disable it
           -- ["<esc>"] = false,
+        },
+        x = {
+          ["p"] = { '"_dP', desc = "Paste without losing yank" },
         },
       },
     },
