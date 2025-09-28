@@ -39,3 +39,5 @@ end
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
+# Set up fzf key bindings
+fzf --fish | source
