@@ -1,7 +1,3 @@
-if true then
-  return {}
-end
-
 return {
   {
     "nvim-treesitter/nvim-treesitter",
@@ -34,7 +30,7 @@ return {
   {
     "mfussenegger/nvim-jdtls",
     dependencies = { "folke/which-key.nvim" },
-    ft = java_filetypes,
+    ft = { "java" },
     opts = function()
       local cmd = { vim.fn.exepath("jdtls") }
       if LazyVim.has("mason.nvim") then
@@ -112,7 +108,7 @@ return {
         local fname = vim.api.nvim_buf_get_name(0)
 
         -- Configuration can be augmented and overridden by opts.jdtls
-        local config = extend_or_override({
+        local config = vim.tbl_deep_extend("force", {
           cmd = opts.full_cmd(opts),
           root_dir = opts.root_dir(fname),
           init_options = {
@@ -123,7 +119,7 @@ return {
           capabilities = LazyVim.has("blink.cmp") and require("blink.cmp").get_lsp_capabilities() or LazyVim.has(
             "cmp-nvim-lsp"
           ) and require("cmp_nvim_lsp").default_capabilities() or nil,
-        }, opts.jdtls)
+        }, opts.jdtls or {})
 
         -- Existing server will be reused if the root_dir matches.
         require("jdtls").start_or_attach(config)
@@ -134,7 +130,7 @@ return {
       -- depending on filetype, so this autocmd doesn't run for the first file.
       -- For that, we call directly below.
       vim.api.nvim_create_autocmd("FileType", {
-        pattern = java_filetypes,
+        pattern = { "java" },
         callback = attach_jdtls,
       })
 

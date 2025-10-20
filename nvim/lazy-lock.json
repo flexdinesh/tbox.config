@@ -21,6 +21,7 @@
   "neotest-golang": { "branch": "main", "commit": "c0e0a75f6a30bba9fc19cb804f89aff3eab1cf3c" },
   "noice.nvim": { "branch": "main", "commit": "db248375c12c5322fbb9b505c1dc6f08e4527684" },
   "nui.nvim": { "branch": "main", "commit": "de740991c12411b663994b2860f1a4fd0937c130" },
+  "nvim-jdtls": { "branch": "master", "commit": "380ac148f989e1291aac002dc959ecc68c5243d0" },
   "nvim-lint": { "branch": "master", "commit": "9da1fb942dd0668d5182f9c8dee801b9c190e2bb" },
   "nvim-lspconfig": { "branch": "master", "commit": "ac98db2f9f06a56498ec890a96928774eae412c3" },
   "nvim-treesitter": { "branch": "main", "commit": "71bf1665f804d46f7e4b24ad7ffc11f6ea5b271a" },

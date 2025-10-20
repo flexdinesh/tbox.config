@@ -25,6 +25,7 @@ return {
               "**/.git/*",
               "**/node_modules/*",
               "**/.turbo/*",
+              "**/*.class",
             },
           },
         },
