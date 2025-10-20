@@ -23,25 +23,13 @@ if test -f /Users/dineshpandiyan/Downloads/google-cloud-sdk/completion.fish.inc
     source /Users/dineshpandiyan/Downloads/google-cloud-sdk/completion.fish.inc
 end
 
-# --- SDKMAN (bash/zsh only) ---
-# Use 'bass' to source bash scripts, or install a fish wrapper.
-# 1) Install fisher + bass once:
-#    curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
-#    fisher install edc/bass
-#
-# 2) Then enable SDKMAN via bass:
-set -gx SDKMAN_DIR $HOME/.sdkman
-if type -q bass
-    if test -s "$SDKMAN_DIR/bin/sdkman-init.sh"
-        bass source "$SDKMAN_DIR/bin/sdkman-init.sh" ';' export SDKMAN_DIR
-    end
-end
-
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Set up fzf key bindings
 fzf --fish | source
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/dineshpandiyan/Downloads/google-cloud-sdk/path.fish.inc' ]; . '/Users/dineshpandiyan/Downloads/google-cloud-sdk/path.fish.inc'; end
+if [ -f '/Users/dineshpandiyan/Downloads/google-cloud-sdk/path.fish.inc' ]
+    . '/Users/dineshpandiyan/Downloads/google-cloud-sdk/path.fish.inc'
+end
 fish_add_path $HOME/.local/bin
