@@ -2,7 +2,14 @@ return {
   {
     "snacks.nvim",
     opts = {
-      scroll = { enabled = false },
+      animate = {
+        duration = { step = 15, total = 250 },
+      },
+      scroll = {
+        enabled = true,
+        delay = 100, -- delay in ms before using the repeat animation
+        duration = { step = 5, total = 50 },
+      },
       explorer = {
         hidden = true,
         ignored = true,
