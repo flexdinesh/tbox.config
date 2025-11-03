@@ -102,5 +102,8 @@
   username = flexdinesh
 	signingkey = /Users/dineshpandiyan/.ssh/id_ed25519_github.pub
 
-[includeIf "gitdir:~/aw-workspace/"]
-	path = "~/.config/git/work_config"
+[includeIf "gitdir:~/workspace-aw/"]
+	path = "~/.config/git/config.work"
+
+[includeIf "gitdir:~/workspace-tm/"]
+	path = "~/.config/git/config.work"
