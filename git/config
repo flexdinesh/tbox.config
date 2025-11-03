@@ -84,4 +84,4 @@
 	email = flexdinesh@gmail.com
 	name = Dinesh Pandiyan
   username = flexdinesh
-	signingkey = /home/dee/.ssh/id_ed25519_github.pub
+	signingkey = /Users/dpandiyan/.ssh/id_ed25519_github.pub
