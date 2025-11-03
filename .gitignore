@@ -3,6 +3,7 @@
 !.gitignore
 
 # selectively include the directories that need to be on git
+!git
 !kitty
 !ghostty
 !fish
@@ -12,3 +13,5 @@
 !tmux
 !btop
 !.zshrc
+!opencode
+!claude
