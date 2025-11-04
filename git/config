@@ -103,7 +103,10 @@
 	signingkey = /Users/dineshpandiyan/.ssh/id_ed25519_github.pub
 
 [includeIf "gitdir:~/workspace-aw/"]
-	path = "~/.config/git/config.work"
+	path = config.work
 
 [includeIf "gitdir:~/workspace-tm/"]
-	path = "~/.config/git/config.work"
+	path = config.work
+
+[includeIf "gitdir:~/workspace-lab/"]
+	path = config.lab
