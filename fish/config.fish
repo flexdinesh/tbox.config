@@ -33,3 +33,7 @@ if [ -f '/Users/dineshpandiyan/Downloads/google-cloud-sdk/path.fish.inc' ]
     . '/Users/dineshpandiyan/Downloads/google-cloud-sdk/path.fish.inc'
 end
 fish_add_path $HOME/.local/bin
+
+# bun
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH
