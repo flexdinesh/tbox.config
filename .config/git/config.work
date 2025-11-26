@@ -1,0 +1,14 @@
+[commit]
+	gpgSign = true
+
+[gpg]
+	format = "ssh"
+
+[tag]
+  gpgSign = true
+
+[user]
+  email = dinesh.pandiyan@thinkmill.com.au
+  name = Dinesh Pandiyan
+  username = flexdinesh
+  signingkey = /Users/dineshpandiyan/.ssh/id_ed25519_github.pub

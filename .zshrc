@@ -1,0 +1,1 @@
+/Users/dineshpandiyan/.config/.zshrc

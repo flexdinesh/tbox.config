@@ -1,0 +1,14 @@
+[commit]
+	gpgSign = true
+
+[gpg]
+	format = "ssh"
+
+[tag]
+  gpgSign = true
+
+[user]
+  email = flexdinesh+dee@gmail.com
+  name = dee
+  username = dee
+  signingkey = /Users/dineshpandiyan/.ssh/id_ed25519_gitea.pub

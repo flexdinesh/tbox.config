@@ -1,0 +1,17 @@
+# ignore all directories by default
+/*
+!.gitignore
+
+# selectively include the directories that need to be on git
+!git
+!kitty
+!ghostty
+!fish
+!nvim
+!fastfetch
+!neofetch
+!tmux
+!btop
+!.zshrc
+!opencode
+!claude
