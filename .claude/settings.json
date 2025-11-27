@@ -11,6 +11,10 @@
       "WebFetch(domain:grep.app)"
     ],
     "deny": []
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "bash $HOME/.claude/statusline-command.sh"
   }
 }
 
