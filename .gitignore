@@ -1,0 +1,41 @@
+# Ignore everything
+*
+# except .gitignore
+!.gitignore
+
+# Allow .config directory structure
+!.config/
+!.config/btop/
+!.config/btop/**
+!.config/fish/
+!.config/fish/**
+!.config/git/
+!.config/git/**
+!.config/ghostty/
+!.config/ghostty/**
+!.config/kitty/
+!.config/kitty/**
+!.config/neofetch/
+!.config/neofetch/**
+!.config/nvim/
+!.config/nvim/**
+!.config/opencode/
+!.config/opencode/**
+!.config/ripgrep/
+!.config/ripgrep/**
+!.config/tmux/
+!.config/tmux/**
+
+# Allow .claude directory structure
+!.claude/
+!.claude/agents/
+!.claude/agents/**
+!.claude/commands/
+!.claude/commands/**
+!.claude/settings.json
+!.claude/statusline-command.sh
+!.claude/CLAUDE.md
+
+# Allow specific files
+!.config/config
+!.zshrc
