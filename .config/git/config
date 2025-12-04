@@ -84,6 +84,53 @@
 [tag]
 	sort = version:refname
 
+[alias]
+	# Usage:
+	# git sync-marker feature-1 feature-2
+	#
+	# Typical workflow:
+	# 1. Sync marker to capture current state of feature-1
+	# git sync-marker feature-1 feature-2
+	#
+	# 2. Update feature-1 (pull latest, rebase onto master, etc.)
+	# git checkout feature-1
+	# git rebase master
+	#
+	# 3. Rebase feature-2 onto updated feature-1
+	# git rebase-onto feature-1 feature-2
+	sync-marker = "!f() { \
+		base=\"$1\"; \
+		feature=\"$2\"; \
+		marker=\"${feature}-marker\"; \
+		git branch -f \"$marker\" \"$base\"; \
+		echo \"Synced marker: $marker -> $base ($(git rev-parse --short \"$base\"))\"; \
+	}; f"
+
+	# Usage:
+	# git rebase-onto feature-1 feature-2
+	#
+	# This will:
+	# 1. Create feature-2-marker if it doesn't exist (pointing to feature-1)
+	# 2. Run git rebase --onto feature-1 feature-2-marker feature-2
+	# 3. Only update the marker to point to feature-1 if rebase succeeds
+	rebase-onto = "!f() { \
+		base=\"$1\"; \
+		feature=\"$2\"; \
+		marker=\"${feature}-marker\"; \
+		if ! git rev-parse --verify \"$marker\" >/dev/null 2>&1; then \
+			git branch \"$marker\" \"$base\"; \
+			echo \"Created marker branch: $marker at $base\"; \
+		fi; \
+		echo \"Rebasing $feature onto $base (using marker: $marker)\"; \
+		if git rebase --onto \"$base\" \"$marker\" \"$feature\"; then \
+			git branch -f \"$marker\" \"$base\"; \
+			echo \"Rebase successful. Updated marker: $marker -> $base\"; \
+		else \
+			echo \"Rebase failed or was aborted. Marker unchanged.\"; \
+			return 1; \
+		fi; \
+	}; f"
+
 # machine/user specific config goes below
 [core]
 	editor = nvim
