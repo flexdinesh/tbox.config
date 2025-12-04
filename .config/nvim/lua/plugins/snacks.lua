@@ -11,19 +11,33 @@ return {
         duration = { step = 5, total = 50 },
       },
       explorer = {
-        hidden = true,
-        ignored = true,
+        replace_netrw = true,
       },
       picker = {
         hidden = true,
-        ignored = true,
         sources = {
-          files = {
+          explorer = {
             hidden = true,
             ignored = true,
+          },
+          files = {
+            hidden = true,
+            ignored = false,
             exclude = {
               "**/.git/*",
               "**/node_modules/*",
+              "**/public/*",
+              "**/.turbo/*",
+              "**/*.class",
+            },
+          },
+          grep = {
+            hidden = true,
+            ignored = false,
+            exclude = {
+              "**/.git/*",
+              "**/node_modules/*",
+              "**/public/*",
               "**/.turbo/*",
               "**/*.class",
             },
