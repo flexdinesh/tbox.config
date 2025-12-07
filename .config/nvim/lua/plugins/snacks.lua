@@ -1,3 +1,40 @@
+local function is_obsidian()
+  local cwd = vim.fn.getcwd()
+  return cwd:match(vim.fn.expand("~/obsidian"))
+end
+
+local function get_picker_opts()
+  local obsidian = is_obsidian()
+  local exclude = obsidian and { "**/.git/*" } or {
+    "**/.git/*",
+    "**/node_modules/*",
+    "**/public/*",
+    "**/.prompts/*",
+    "**/.turbo/*",
+    "**/*.class",
+  }
+
+  return {
+    hidden = true,
+    sources = {
+      explorer = {
+        hidden = true,
+        ignored = true,
+      },
+      files = {
+        hidden = true,
+        ignored = obsidian,
+        exclude = exclude,
+      },
+      grep = {
+        hidden = true,
+        ignored = obsidian,
+        exclude = exclude,
+      },
+    },
+  }
+end
+
 return {
   {
     "snacks.nvim",
@@ -13,39 +50,7 @@ return {
       explorer = {
         replace_netrw = true,
       },
-      picker = {
-        hidden = true,
-        sources = {
-          explorer = {
-            hidden = true,
-            ignored = true,
-          },
-          files = {
-            hidden = true,
-            ignored = false,
-            exclude = {
-              "**/.git/*",
-              "**/node_modules/*",
-              "**/public/*",
-              "**/.prompts/*",
-              "**/.turbo/*",
-              "**/*.class",
-            },
-          },
-          grep = {
-            hidden = true,
-            ignored = false,
-            exclude = {
-              "**/.git/*",
-              "**/node_modules/*",
-              "**/public/*",
-              "**/.prompts/*",
-              "**/.turbo/*",
-              "**/*.class",
-            },
-          },
-        },
-      },
+      picker = get_picker_opts(),
     },
   },
 }
