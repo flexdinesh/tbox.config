@@ -1,18 +1,33 @@
-local function is_obsidian()
-  local cwd = vim.fn.getcwd()
-  return cwd:match(vim.fn.expand("~/obsidian"))
-end
+local picker_config = {
+  global = {
+    ignored = false,
+    exclude = {
+      "**/.git/*",
+      "**/node_modules/*",
+      "**/public/*",
+      "**/.prompts/*",
+      "**/.turbo/*",
+      "**/*.class",
+    },
+  },
+  projects = {
+    ["~/obsidian"] = {
+      ignored = true,
+      exclude = { "**/.git/*" },
+    },
+  },
+}
 
 local function get_picker_opts()
-  local obsidian = is_obsidian()
-  local exclude = obsidian and { "**/.git/*" } or {
-    "**/.git/*",
-    "**/node_modules/*",
-    "**/public/*",
-    "**/.prompts/*",
-    "**/.turbo/*",
-    "**/*.class",
-  }
+  local cwd = vim.fn.getcwd()
+  local config = vim.deepcopy(picker_config.global)
+
+  for path, overrides in pairs(picker_config.projects) do
+    if cwd:match(vim.fn.expand(path)) then
+      config = vim.tbl_deep_extend("force", config, overrides)
+      break
+    end
+  end
 
   return {
     hidden = true,
@@ -23,13 +38,13 @@ local function get_picker_opts()
       },
       files = {
         hidden = true,
-        ignored = obsidian,
-        exclude = exclude,
+        ignored = config.ignored,
+        exclude = config.exclude,
       },
       grep = {
         hidden = true,
-        ignored = obsidian,
-        exclude = exclude,
+        ignored = config.ignored,
+        exclude = config.exclude,
       },
     },
   }
@@ -44,7 +59,7 @@ return {
       },
       scroll = {
         enabled = true,
-        delay = 100, -- delay in ms before using the repeat animation
+        delay = 100,
         duration = { step = 5, total = 50 },
       },
       explorer = {
