@@ -1,7 +1,7 @@
 shell-integration = fish
 # theme = catppuccin-mocha
 # theme = GruvboxDark
-theme = 0x96f
+# theme = 0x96f
 
 font-size = 15
 adjust-cell-height = 20%
