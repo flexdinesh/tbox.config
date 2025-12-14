@@ -5,6 +5,8 @@ local picker_config = {
       "**/.git/*",
       "**/node_modules/*",
       "**/public/*",
+      "**/dist/*",
+      "**/build/*",
       "**/.prompts/*",
       "**/.turbo/*",
       "**/*.class",
