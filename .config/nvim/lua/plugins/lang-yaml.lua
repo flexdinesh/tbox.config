@@ -42,6 +42,7 @@ return {
               keyOrdering = false,
               format = {
                 enable = true,
+                singleQuote = true,
               },
               validate = true,
               schemaStore = {
