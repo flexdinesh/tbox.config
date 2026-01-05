@@ -26,24 +26,5 @@ The section titles should not repeat the term used in the page title, for
 example, if the page title is "Models", avoid using a section title like "Add
 new models". This might be unavoidable in some cases, but try to avoid it.
 
-Here is an example
-
-```
-# Project Title
-
-Simple overview of use/purpose.
-
-## Usage
-
-### Dependencies
-
-* Describe any prerequisites, libraries, OS version, etc., needed.
-
-### Run
-
-* How to run the program
-* Step-by-step bullets
-```
-
 For JS or TS code snippets remove trailing semicolons and any trailing commas
 that might not be needed.
