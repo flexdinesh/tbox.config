@@ -1,5 +1,10 @@
+# Ignore all nested .git directories
+**/.git
+**/.git/**
+
 # Ignore everything
 *
+
 # except .gitignore
 !.gitignore
 
@@ -39,3 +44,6 @@
 # Allow specific files
 !.config/config
 !.zshrc
+
+# Ignore top level dirs that have git dirs
+workspace-*/
