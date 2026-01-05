@@ -2,23 +2,10 @@
   "$schema": "https://opencode.ai/config.json",
   "autoupdate": true,
   "snapshot": false,
-  "tools": {
-    "bash": true,
-    "edit": true,
-    "write": true,
-    "read": true,
-    "grep": true,
-    "glob": true,
-    "list": true,
-    "patch": true,
-    "todowrite": true,
-    "todoread": true,
-    "webfetch": true
-  },
   "permission": {
     "bash": {
-      "*": "ask",
       "find *": "allow",
+      "ripgrep *": "allow",
       "grep *": "allow",
       "sort *": "allow",
       "ls *": "allow",
@@ -27,46 +14,15 @@
       "git status *": "allow",
       "git log *": "allow",
       "git diff *": "allow",
-      "git show *": "allow"
+      "git show *": "allow",
+      "*": "ask"
     },
-    "edit": "ask",
+    "edit": {
+      "*.md": "allow",
+      "*": "deny"
+    },
     "webfetch": "allow",
     "doom_loop": "ask",
     "external_directory": "ask"
-  },
-  "agent": {
-    "plan": {
-      "tools": {
-        "edit": false,
-        "write": false,
-        "patch": false
-      },
-      "permission": {}
-    },
-    "build": {
-      "permission": {}
-    },
-    "explore": {
-      "description": "Fast agent specialized for exploring codebases. Use for finding files by patterns, searching code for keywords, or answering questions about the codebase.",
-      "mode": "subagent",
-      "model": "anthropic/claude-haiku-4-5",
-      "temperature": 0.1,
-      "tools": {
-        "edit": false,
-        "write": false,
-        "patch": false
-      },
-      "permission": {}
-    },
-    "code-review": {
-      "description": "Reviews code for best practices and potential issues",
-      "mode": "subagent",
-      "prompt": "{file:./prompts/code-review.txt}",
-      "tools": {
-        "write": false,
-        "edit": false,
-        "patch": false
-      }
-    }
   }
 }
