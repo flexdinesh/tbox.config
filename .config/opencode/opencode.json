@@ -19,7 +19,7 @@
       "git show *": "allow"
     },
     "edit": {
-      "*": "deny",
+      "*": "ask",
       "*.md": "allow"
     },
     "webfetch": "allow",
