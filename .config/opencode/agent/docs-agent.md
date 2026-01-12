@@ -1,5 +1,5 @@
 ---
-description: ALWAYS use this when writing docs
+description: Agent for writing docs
 color: "#38A3EE"
 ---
 

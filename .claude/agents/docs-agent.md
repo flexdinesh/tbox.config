@@ -1,5 +1,5 @@
 ---
-name: docs
+name: docs agent
 description: Agent for writing docs
 ---
 

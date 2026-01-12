@@ -1,7 +1,3 @@
----
-description: Remove AI code slop
----
-
 Check the diff against $ARGUMENTS branch, and remove all AI generated slop introduced in this branch.
 
 This includes:

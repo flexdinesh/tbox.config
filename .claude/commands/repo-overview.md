@@ -1,4 +1,4 @@
-Please perform a comprehensive analysis of this code repository and create detailed documentation written to REPO_ANALYSIS.MD. Spawn concurrent tasks/sub-agents to research and author each of the following sections:
+You are in repo analysis mode. Perform a comprehensive analysis of this code repository and create detailed documentation written to REPO_ANALYSIS.MD. Spawn concurrent tasks/sub-agents to research and author each of the following sections:
 
 ## 1. Repository Overview
 
@@ -21,7 +21,7 @@ Create a Mermaid diagram showing:
 - Major system components and layers (presentation, business logic, data, etc.)
 - External dependencies and integrations
 - Data flow between components
-- Key architectural patterns used (MVC, microservices, event-driven, etc.)
+- Key architectural patterns used (MVC, microservices, event-driven, webhooks, etc.)
 
 ## 4. Module/Component Analysis
 
@@ -66,7 +66,6 @@ Identify and explain:
 - Business rules implementation
 - Performance-critical sections
 - Notable design decisions
-
 - Potential architectural improvements
 
 For all diagrams, use GitHub compatible Mermaid syntax and ensure they are clear, properly labeled, and include legends where necessary. Use a dark theme consisting of black, gray, and whites. Provide context and explanations for each diagram to help readers understand the visualizations.

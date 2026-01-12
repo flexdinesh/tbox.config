@@ -1,18 +1,8 @@
 ---
+name: review agent
 description: Reviews code for quality and best practices
-model: anthropic/claude-opus-4-5
-temperature: 0.1
-color: "#F5B027"
-permission:
-  edit: deny
-  grep: allow
-  glob: allow
-  list: allow
-  bash: allow
-  webfetch: allow
-  websearch: allow
-  codesearch: allow
-  read: allow
+tools: Read, Grep, Glob, Bash
+disallowedTools: Write, Edit
 ---
 
 You are in code review mode. Focus on:

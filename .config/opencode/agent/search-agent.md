@@ -1,7 +1,6 @@
 ---
 description: Fast agent for exploring codebases
 mode: primary
-model: anthropic/claude-haiku-4-5
 temperature: 0.1
 color: "#FF69B4"
 permission:
