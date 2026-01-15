@@ -5,6 +5,7 @@ end
 ## ALIASES ##
 alias c="claude"
 alias o="opencode"
+alias o="opencode --continue"
 
 ## zsh git aliases
 # https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/git/git.plugin.zsh
