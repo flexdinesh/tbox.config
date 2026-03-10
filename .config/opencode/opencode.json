@@ -25,5 +25,22 @@
     "webfetch": "allow",
     "doom_loop": "ask",
     "external_directory": "ask"
+  },
+  "agent": {
+    "explore": {
+      "model": "openai/codex-mini-latest"
+    },
+    "general": {
+      "model": "openai/codex-mini-latest"
+    },
+    "title": {
+      "model": "openai/codex-mini-latest"
+    },
+    "summary": {
+      "model": "openai/codex-mini-latest"
+    },
+    "compaction": {
+      "model": "openai/codex-mini-latest"
+    }
   }
 }
