@@ -1,0 +1,30 @@
+model = "gpt-5.4"
+model_reasoning_effort = "medium"
+approval_policy = "on-request"
+personality = "pragmatic"
+
+[features]
+multi_agent = true
+
+[agents]
+max_threads = 20
+max_depth = 3
+
+[agents.explorer]
+description = "Read-only codebase explorer for gathering evidence before changes are proposed."
+config_file = "agents/explorer.toml"
+
+[agents.reviewer]
+description = "PR reviewer focused on correctness, security, and missing tests."
+config_file = "agents/reviewer.toml"
+
+[analytics]
+enabled = false
+
+[notice.model_migrations]
+"gpt-5.2-codex" = "gpt-5.3-codex"
+"gpt-5.1-codex-mini" = "gpt-5.3-codex"
+"gpt-5.3-codex" = "gpt-5.4"
+
+[tui]
+status_line = ["model-with-reasoning", "current-dir", "git-branch", "context-used", "five-hour-limit"]

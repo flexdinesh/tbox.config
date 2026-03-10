@@ -37,10 +37,21 @@
 !.claude/agents/**
 !.claude/commands/
 !.claude/commands/**
+!.claude/skills/
+!.claude/skills/**
 !.claude/settings.json
 !.claude/statusline-command.sh
 !.claude/CLAUDE.md
 
+# Allow .claude directory structure
+!.codex/
+!.codex/agents/
+!.codex/agents/**
+!.codex/skills/
+!.codex/skills/**
+.codex/skills/.system/
+!.codex/config.toml
+#
 # Allow specific files
 !.config/config
 !.zshrc
