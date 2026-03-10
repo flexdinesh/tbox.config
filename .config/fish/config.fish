@@ -53,3 +53,6 @@ fish_add_path $HOME/.local/bin
 set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
 set -gx RIPGREP_CONFIG_PATH "$HOME/.config/ripgrep/config"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/dineshpandiyan/google-cloud-sdk/path.fish.inc' ]; . '/Users/dineshpandiyan/google-cloud-sdk/path.fish.inc'; end
