@@ -8,7 +8,7 @@
   gpgSign = true
 
 [user]
-  email = flexdinesh+dee@gmail.com
-  name = dee
-  username = dee
-  signingkey = /Users/dineshpandiyan/.ssh/id_ed25519_gitea.pub
+  email = flexdinesh@gmail.com
+  name = Dinesh Pandiyan
+  username = flexdinesh
+  signingkey = /Users/dineshpandiyan/.ssh/id_ed25519_github.pub

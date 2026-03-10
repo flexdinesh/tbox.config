@@ -43,7 +43,7 @@
 !.claude/statusline-command.sh
 !.claude/CLAUDE.md
 
-# Allow .claude directory structure
+# Allow .codex directory structure
 !.codex/
 !.codex/agents/
 !.codex/agents/**
