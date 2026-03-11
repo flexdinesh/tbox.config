@@ -1,4 +1,5 @@
 shell-integration = fish
+shell-integration-features = ssh-terminfo,ssh-env
 # theme = catppuccin-mocha
 # theme = GruvboxDark
 # theme = 0x96f

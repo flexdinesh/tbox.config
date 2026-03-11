@@ -85,6 +85,7 @@ return {
             { "location", padding = { left = 0, right = 1 } },
           },
           lualine_z = {
+            { "hostname" },
             function()
               return " " .. os.date("%R")
             end,
