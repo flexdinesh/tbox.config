@@ -28,19 +28,19 @@
   },
   "agent": {
     "explore": {
-      "model": "openai/codex-mini-latest"
+      "model": "openai/gpt-5.3-codex-spark"
     },
     "general": {
-      "model": "openai/codex-mini-latest"
+      "model": "openai/gpt-5.3-codex-spark"
     },
     "title": {
-      "model": "openai/codex-mini-latest"
+      "model": "openai/gpt-5.3-codex-spark"
     },
     "summary": {
-      "model": "openai/codex-mini-latest"
+      "model": "openai/gpt-5.3-codex-spark"
     },
     "compaction": {
-      "model": "openai/codex-mini-latest"
+      "model": "openai/gpt-5.3-codex-spark"
     }
   }
 }
